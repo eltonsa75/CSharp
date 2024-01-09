@@ -19,8 +19,12 @@ namespace Course
             double preco2 = 650.50;
             double medida = 53.234567;
 
-            Console.WriteLine(produto1);
-
+            Console.WriteLine("Produtos:" + produto1 + ", cujo preço é $" + preco1.ToString("F2") + " " + produto2 + ", cujo preço é $" + preco2.ToString("F2"));
+            Console.WriteLine("====================================");
+            Console.WriteLine("Registro:" + idade + " anos de idade, código " + codigo + " e gênero: " + genero);
+            Console.WriteLine("=====================================");
+            Console.WriteLine("Medida com oito casas decimais:" + medida + " Arredondado (três casas decimais):" + medida.ToString("F3") + " Separador decimal invarinat culture:" + medida.ToString("F3", CultureInfo.InvariantCulture));
+            
 
 
 
