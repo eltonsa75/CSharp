@@ -1,4 +1,4 @@
-##  C# Completo programação Orientada a Objetos
+##  C# Completo Programação Orientada a Objetos
 
 # O QUE APREENDI NO CURSO 
 Dominar Programação Orientada a Objetos e linguagem C#
