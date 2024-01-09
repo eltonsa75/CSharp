@@ -28,8 +28,12 @@ namespace Course
             /* Colocando ponto de separador */
             Console.WriteLine(saldo.ToString("F4", CultureInfo.InvariantCulture));
             Console.WriteLine("--------------------------------------------------");
-
-            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2} reais", nome, idade, saldo);
+            /*Técnica do placehouder */
+            Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2:F2} reais", nome, idade, saldo);
+            /*Interpolação */
+            Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais");
+            /* Concaternação de dados */
+            Console.WriteLine(nome + " tem " + idade + " anos e tem saldo igual a " + saldo.ToString("F2", CultureInfo.InvariantCulture) + " reais");
 
 
 
