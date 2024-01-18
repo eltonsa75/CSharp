@@ -1,4 +1,7 @@
-﻿namespace Funcoes
+﻿using System;
+
+
+namespace Funcoes
 {
     internal class Program
     {
@@ -10,20 +13,27 @@
             int n2 = int.Parse(Console.ReadLine());
             int n3 = int.Parse(Console.ReadLine());
 
+            double resultado = Maior(n1, n2, n3);
 
-            if ( n1 > n2 && n1 > n3 )
+            Console.WriteLine("Maior = " + resultado);
+
+        }
+
+        static int Maior(int a, int b, int c) {
+            int m;
+            if( a > b && a > c )
             {
-                Console.WriteLine("Maior = " + n1);
+                m = a;
             }
-
-            else if ( n2 > n3 )
+            else if (b > c )
             {
-                Console.WriteLine("Maior = " + n2);
+                m = b;
             }
             else
             {
-                Console.WriteLine("Maior = " + n3);
+                m = c;
             }
+            return m;
         }
     }
 }
