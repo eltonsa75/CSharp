@@ -8,6 +8,16 @@ Aplicar o conhecimento de orientação a objetos na construção de soluções p
 Compreender diagramas de classe UML, tanto de entidades quanto de serviços
 
 
+## TECLAS PARA DEBUGGING NO VISUAL STUDIO
+
+**
+F9 - Marcar/desmarcar breakpoint
+F5 - iniciar/continuar o debug
+F10 - executar um passo (pular função)
+F11 - executar um passo (entrar na função)
+SHIRT+F11 - sair do método em execução
+SHIRT+F5 - para debug
+
 
 **Fonte: Nelio Alves - C# Completo programação Orientada a Objetos*
 
