@@ -11,11 +11,11 @@ namespace Contructors
 
             Produto p = new Produto("TV", 500.00, 10);
 
-            p.SetNome("TV 4k");
+            p.Nome ="T";
 
-            Console.WriteLine(p.GetNome());
-            Console.WriteLine(p.GetPreco);
-            Console.WriteLine(p.GetQuantidade);
+            Console.WriteLine(p.Nome);
+            Console.WriteLine(p.Preco);
+            Console.WriteLine(p.Quantidade);
 
 
 
