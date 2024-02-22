@@ -42,6 +42,22 @@ namespace Listas
             foreach (string obj in list2) {
                 Console.WriteLine(obj);
             }
+
+            list.Remove("Maria");
+            Console.WriteLine("=============================");
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj);
+            }
+
+            list.RemoveAll(x => x[0] == 'M');
+            Console.WriteLine("=============================");
+            foreach (string obj in list)
+            {
+                Console.WriteLine(obj);
+            }
+
+
         }
 
         
