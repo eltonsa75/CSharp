@@ -11,7 +11,7 @@ namespace ExercicioProposto02.Entities
         public DateTime Moment { get; set; }
         public string Title {  get; set; }
         public string Content { get; set; }
-        public int likes { get; set; }
+        public int Likes { get; set; }
 
         public List<Comment> Comments { get; set; } = new List<Comment>();
 
@@ -22,7 +22,7 @@ namespace ExercicioProposto02.Entities
             Moment = moment;
             Title = title;
             Content = content;
-            this.likes = likes;
+            this.Likes = likes;
         }
 
         public void AddComment(Comment comment)
@@ -39,7 +39,7 @@ namespace ExercicioProposto02.Entities
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(Title);
-            sb.Append(likes);
+            sb.Append(Likes);
             sb.AppendLine(" Likes - ");
             sb.AppendLine(Moment.ToString("dd/MM/yyyy HH:mm:ss"));
             sb.AppendLine(Content);

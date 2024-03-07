@@ -26,8 +26,11 @@ namespace ExercicioProposto02
                 "Good night guys",
                 "See you tomorrow",
                 5);
-            p1.AddComment(c3);
-            p1.AddComment(c4);
+            p2.AddComment(c3);
+            p2.AddComment(c4);
+
+            Console.WriteLine(p1);
+            Console.WriteLine(p2);
         }
     }
 }
