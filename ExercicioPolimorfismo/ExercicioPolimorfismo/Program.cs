@@ -13,7 +13,7 @@ namespace ExercicioPolimorfismo
 
             List<Employee> list = new List<Employee>();
 
-            Console.WriteLine("enter the number of employees");
+            Console.Write("enter the number of employees");
             int n = int.Parse(Console.ReadLine());
 
             for (int i = 1; i <= n; i++) {
@@ -32,7 +32,17 @@ namespace ExercicioPolimorfismo
                     double additionalCharge = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     list.Add(new OutsourceEmployee(name, hours, valuePerhours, additionalCharge));
                 }
+                else
+                {
+                    list.Add(new Employee(name, hours, valuePerhours));
+                }
+            }
 
+            Console.WriteLine();
+            Console.WriteLine("PAYMENTS:");
+            foreach (Employee emp in list)
+            {
+                Console.WriteLine(emp.Name + " - $ " + emp.Payment().ToString("F2", CultureInfo.InvariantCulture));
             }
         }
     }
