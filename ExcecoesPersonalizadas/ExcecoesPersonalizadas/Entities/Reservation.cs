@@ -1,47 +1,65 @@
 ﻿using System;
+using ExcecoesPersonalizadas.Entities
 
 
-namespace ExcecoesPersonalizadas.Entities
+namespace ExcecoesPersonalizadas.Entities.Exceptions;
+
+internal class Reservation
 {
-    internal class Reservation
+    public int RoomNumber { get; set; }
+    public DateTime CheckIn { get; set; }
+    public DateTime CheckOut {get; set; }
+
+    public Reservation() { }
+
+    public Reservation(int roomNumber, DateTime checkIn, DateTime checkOut)
     {
-        public int RoomNumber { get; set; }
-        public DateTime CheckIn { get; set; }
-        public DateTime CheckOut {get; set; }
-
-        public Reservation() { }
-
-        public Reservation(int roomNumber, DateTime checkIn, DateTime checkOut)
+        if(checkOut <= checkIn)
         {
-            RoomNumber = roomNumber;
-            CheckIn = checkIn;
-            CheckOut = checkOut;
+            throw new DomanException("Reservation dates for update must be future dates ");
         }
 
-        public int Duration()
+        RoomNumber = roomNumber;
+        CheckIn = checkIn;
+        CheckOut = checkOut;
+    }
+
+    public int Duration()
+    {
+        TimeSpan duration = CheckOut.Subtract(CheckIn);
+        return (int)duration.TotalDays;
+    }
+
+    public void UpdateDates(DateTime checkIn, DateTime checkOut)
+    {
+
+        DateTime now = DateTime.Now;
+
+        if (checkIn < now || checkOut < now)
         {
-            TimeSpan duration = CheckOut.Subtract(CheckIn);
-            return (int)duration.TotalDays;
+            throw new DomanException("Reservation dates for update must be future dates ");
+        }
+        if (checkOut <= checkIn)
+        {
+            throw new DomanException("Check-out date must be after check-in date ");
         }
 
-        public void UpdateDates(DateTime checkIn, DateTime checkOut)
-        {
-            checkIn = checkIn;
-            checkOut = checkOut;
-        }
+        CheckIn = checkIn;
+        CheckOut = checkOut;
+       
+    }
 
-        public override string ToString()
-        {
-            return "Room "
-                + RoomNumber
-                + ", check-in: "
-                + CheckIn.ToString("dd/MM/yyyy")
-                + ", check-out: "
-                + CheckOut.ToString("dd/MM/yyyy")
-                + ", "
-                + Duration()
-                + " nights";
+    public override string ToString()
+    {
+        return "Room "
+            + RoomNumber
+            + ", check-in: "
+            + CheckIn.ToString("dd/MM/yyyy")
+            + ", check-out: "
+            + CheckOut.ToString("dd/MM/yyyy")
+            + ", "
+            + Duration()
+            + " nights";
 
-        }
     }
 }
