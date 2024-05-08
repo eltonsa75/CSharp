@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Generic
 {
-    internal class PrintService
+    internal class PrintService<T>
     {
-        private int[] _values = new int[10];
+        private T[] _values = new T[10];
         private int _count = 0;
 
-        public void addValue(int value)
+        public void addValue(T value)
         {
             if(_count == 10)
             {
@@ -21,7 +21,7 @@ namespace Generic
             _count++;
         }
 
-        public int First()
+        public T First()
         {
             if (_count == 0)
             {
