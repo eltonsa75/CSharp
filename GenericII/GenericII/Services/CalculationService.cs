@@ -18,7 +18,7 @@ namespace GenericII.Services
             T max = list[0];
             for (int i = 1; i < list.Count; i++)
             {
-                if (list[i].CompareTo(max) < 0)
+                if (list[i].CompareTo(max) > 0)
                 {
                     max = list[i];
                 }
