@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Data;
+using SalesWebMvc.Services;
 
 namespace SalesWebMvc
 {
@@ -33,6 +34,7 @@ namespace SalesWebMvc
 
             //Criando uma carga no sistema usando Seed / Criando uma Injeção de Dependencia
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
