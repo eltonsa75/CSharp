@@ -35,6 +35,7 @@ namespace SalesWebMvc
             //Criando uma carga no sistema usando Seed / Criando uma Injeção de Dependencia
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
+            services.AddScoped<DepartmentService>();
 
         }
 
