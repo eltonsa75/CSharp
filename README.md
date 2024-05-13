@@ -28,6 +28,18 @@ SHIRT+F5 - para debug
 
 ![Alt text](image.png)
 
+##  TELA LISTA DO PROJETO
+
+![Alt text](lista.png)
+
+##  TELA BUSCA SIMPLES DO PROJETO
+
+![Alt text](BuscaSimples.png)
+
+##  TELA BUSCA AGRUPADA DO PROJETO
+
+![Alt text](BuscaAgrupada.png)
+
 
 **Fonte: Nelio Alves - C# Completo programação Orientada a Objetos*
 
