@@ -1,7 +1,6 @@
 ﻿
 
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using SalesWebMvc.Models.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
